@@ -1,0 +1,120 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Scrolio
+	Author: Two2Twelve Themes
+	Author URI: http://themes.two2twelve.com
+	Version: 1.0
+	
+	Stylesheet: Dark
+	
+-----------------------------------------------------------------------------------*/
+body.linen,
+body.linen header { background: black; }
+body.noise,
+body.noise header { background: black; }
+body.stripe,
+body.stripe header { background: black; }
+section#pages .page .heading { border-color: #111; }
+section#pages .page .content { border-color: #414141; }
+section#pages .page .heading span { color: #888; }
+section#pages .box {
+	background-color: black;
+	border-color: rgba(255,255,255,0.10);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+/* Header & Navigation */
+header { border-color: #444; }
+	header nav ul li a{ color: #777; }
+	header nav ul li a:hover { color: #ccc; }
+/* Logo & Slider */
+section#intro .logo span.tagline { color: #999; }
+.flexslider-container { border-color: #444; }
+	.flexslider { 
+		background: #393939; 
+		border-color: #393939;
+	}
+	.flex-direction-nav .prev,
+	.flex-direction-nav .next {
+		color: #aaa;
+		background: #393939;
+		border-color: #444;
+	}
+		.flex-direction-nav .next:hover,
+		.flex-direction-nav .prev:hover { color: #fff; }
+/* About */
+div.tweets { 
+	background: #393939 !important;
+	border-color: #444 !important;
+}
+	div.tweets span.icon a:hover { color: #fff; }
+	div.tweets ul li .tweet_text { color: #aaa; }
+	div.tweets ul li .tweet_time a:hover { color: #ccc; }
+/* Portfolio */
+ul.filter_list li.current a { 
+	background-color: rgba(255,255,255,0.05);
+	border-color: rgba(255,255,255,0.10);
+}
+/* Testimonials */
+div.testimonial { color: #999; }
+ul.testimonials li a { border-color: rgba(255,255,255,0.10); }
+	ul.testimonials li a:hover,
+	ul.testimonials li.current a {
+		border-color: rgba(255,255,255,0.35);
+	}
+div.testimonial p { color: #aaa; }
+/* Contact */
+div#map address {
+	color: #aaa;
+}
+/* Footer */
+footer p 				 { background: rgba(255,255,255,0.05); color: #777; }
+	footer p:hover { background: rgba(255,255,255,0.06); color: #aaa; }
+/* Forms */
+form input[type="text"],
+form input[type="email"],
+textarea { 
+	background-color: rgba(255,255,255,0.05);
+	border-color: rgba(255,255,255,0.10);
+	color: #fff;
+}
+/* Typography */
+h1,h2,h3,h4,h5 		 { color: #fff; }
+p { color: #aaa; }
+b { color: #eaeaea; }
+/* Progress Bars */
+div.progress_bar {
+	background: #393939;
+	border-color: #444;
+}
+/* Lists */
+ul.social li a { background: url('../images/dark-social.png') no-repeat top left; }
+div.toggle_list ul li div.title {
+	background: #2d2d2d;
+	border-color: #383838;
+}
+	div.toggle_list ul li div.title h3 { color: #fff; }
+	div.toggle_list ul li div.content {
+		background: #222;
+		border-color: #323232;
+	}
+div.tabs ul.nav li a {
+  background: #2d2d2d;
+  border: 1px solid #383838;
+  color: #8F8F8F;
+}
+div.tabs ul.nav li.current a {
+  background: #222;
+  border-width: 1px solid #383838;
+  color: #fff;
+}
+div.tabs .pane {
+  background: #222;
+  border: 1px solid #383838;
+}
+/* Back to Top */
+#toTop { 
+	background-color: rgba(255,255,255,0.05);
+	border-color: rgba(255,255,255,0.10);
+}
