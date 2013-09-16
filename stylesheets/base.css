@@ -164,7 +164,58 @@ section#pages { }
 		-moz-box-shadow: 0px 1px 4px #ddd;
 		box-shadow: 0px 1px 4px #ddd;
 	}
-		section#pages .box .inner { padding: 15px; }
+		section#pages .box .inner.with_gallery { 
+			min-height: 90px; 
+			position: relative;
+		}
+	
+		section#pages #portfolio .box .inner > .box_heading {
+			padding: 15px 15px 30px 15px;
+		}
+
+		section#pages .box .inner > .box_heading {
+			padding: 15px;
+		}
+		section#pages .box .inner > p { 
+			padding: 0 15px; 
+		}
+
+		section#pages .box .inner .box_heading a {
+			display: block;
+			width: 19px;
+			height: 19px;
+			position: absolute;
+			bottom: 0px;
+			cursor: pointer;
+			border: 1px black solid;
+		}
+
+		section#pages .box .inner .box_heading a.first {
+			right: 0px;
+		}
+
+		section#pages .box .inner .box_heading a.second {
+			right: 20px;
+		}
+
+		section#pages .box .inner .box_heading a.preview {
+			background: url(/images/sprite.png) no-repeat scroll 4px -58px black;
+		}
+
+		section#pages .box .inner .box_heading a.preview:hover { 
+			background: url(/images/sprite.png) no-repeat scroll 4px -91px black;
+			border: 1px #333 dotted;
+		}
+
+		section#pages .box .inner .box_heading a.link {
+			background: url(/images/sprite.png) no-repeat scroll 4px 4px black;
+		}
+
+		section#pages .box .inner .box_heading a.link:hover { 
+			background: url(/images/sprite.png) no-repeat scroll 4px -27px black;
+			border: 1px #333 dotted;
+		}
+
 /*--------------------------------------------
 2. Header & Navigation
 ---------------------------------------------*/
@@ -503,6 +554,11 @@ div.tweets {
 /*--------------------------------------------
 5. Portfolio
 ---------------------------------------------*/
+
+#portfolio div.one_third {
+	margin-bottom: 15px;
+}
+.hidden_gallery { display: none; }
 ul.filter_list {
 	list-style: none;
 	overflow: hidden;
@@ -642,11 +698,11 @@ div.testimonial {
 		color: #636363;
 		margin-bottom: 15px;
 	}
-	div.testimonial address { font-style: normal; }
+	div.testimonial .address { font-style: normal; }
 	div.testimonial span {
 		font-size: 15px;
 	}
-		div.testimonial address a {
+		div.testimonial .address a {
 			text-decoration: none;
 			font-size: 15px;
 			-webkit-transition:color 0.2s ease-in;  
@@ -654,7 +710,7 @@ div.testimonial {
 	    -o-transition:color 0.2s ease-in;  
 	    transition:color 0.2s ease-in;
 		}
-		div.testimonial address a:hover {
+		div.testimonial .address a:hover {
 			color: #444;
 		}
 /*--------------------------------------------
@@ -690,17 +746,15 @@ div#contact_form .success {
 	div#contact_form .success p	    { color: #65cf82; }
 /* Map */
 div#map {
-	width: 430px;
-	float: right;
 	margin-right: 5px;
 }
-	div#map address {
+	.address {
 		font-size: 13px;
 		line-height: 20px;
 		font-style: normal;
 		color: #777;
 	}
-		div#map address .icon {
+		.address .icon {
 			font-size: 12px;
 			margin-right: 5px;
 		}
@@ -1063,6 +1117,8 @@ ul.social {
 			ul.social li.rss a:hover 			{ background-position: -24px -120px; }
 		ul.social li.email a 						{ background-position: 0px -144px; }
 			ul.social li.email a:hover 		{ background-position: -24px -144px; }
+		ul.social li.youtube a 						{ background-position: 0px -144px; }
+			ul.social li.youtube a:hover 		{ background-position: -24px -144px; }	
 div.toggle_list {
 	margin-bottom: 25px;
 }

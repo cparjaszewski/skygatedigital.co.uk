@@ -76,6 +76,7 @@ $(document).ready(function() {
 	$("#twitter_stream").tweet({
 		username: "SkyGatePL", // Customize your twitter username here
 		count: 5,
+		modpath: './twitter/',
 		template: "{text}{time}",
 		retweets: false,
 		loading_text: "loading tweets..."
@@ -113,11 +114,15 @@ $(document).ready(function() {
 
 				var myOptions = {
 					zoom: dataZoom,
-					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeId: google.maps.MapTypeId.HYBRID,
 					center: latlng
 				};
 
 				var map = new google.maps.Map(this, myOptions);
+
+				var contentString = $canvas.attr('data-content') ? $canvas.attr('data-content') : '<h1>HQ</h1>';
+
+				var infoWindow = new google.maps.InfoWindow({content: contentString, width: 240});
 
 				if($canvas.attr('data-address')){
 					var geocoder = new google.maps.Geocoder();
@@ -132,6 +137,7 @@ $(document).ready(function() {
 									position: results[0].geometry.location,
 									title: $canvas.attr('data-mapTitle')
 								});
+								infoWindow.open(map, marker);
 							}
 					});
 				}
@@ -147,70 +153,6 @@ $(document).ready(function() {
 	 		FluidNav.goTo(page);
 			$("html,body").animate({ scrollTop:$('#'+page).offset().top }, 700);
 		}
-	});
-		
-	// Portfolio hover
-	$(".filter_items li").each(function() {
-		$("a", this).append('<div class="hover"><span class="icon general-enclosed">d</span></div>');
-	});
-
-	$(".filter_items li").live({
-		mouseenter: function() {
-			$("a", this).find(".hover").stop(true, true).fadeIn(400);
-		},
-		mouseleave: function() {
-			$("a", this).find(".hover").stop(true, true).fadeOut(400);
-		}
-	});
-	
-	function initFancyboxes() {
-		$("a.fancybox").fancybox({
-			"transitionIn":			"elastic",
-			"transitionOut":		"elastic",
-			"easingIn":					"easeOutBack",
-			"easingOut":				"easeInBack",
-			"padding":					0,
-			"speedIn":      		500,
-			"speedOut": 				500,
-			"hideOnContentClick":	"true",
-			"overlayShow":        true
-		});
-	}
-	initFancyboxes();
-	
-	// Portfolio sorting
-	var $filterType = $('ul.filter_list li.current a').attr('class');
-
-	// Adding a data-id attribute. Required by the Quicksand plugin
-	$(".filter_items li").each(function(i){
-      $(this).attr('data-id',i);
-  });
-
-	$(".filter_items li a").each(function(i){
-      $(this).attr("rel", "portfolio");
-  });
-
-
- 	// Clone applications to get a second collection
-	var $data = $(".filter_items").clone();
-
-	$('.filter_list li a').click(function(e) {
-		$(".filter_list li").removeClass("current");	
-		// Use the last category class as the category to filter by.
-		var filterClass = $(this).attr('class');
-		$(this).parent().addClass('current');
-
-		if (filterClass == 'all-items') {
-			var $filteredData = $data.find('li');
-		} else {
-			var $filteredData = $data.find('li[data-type~=' + filterClass + ']');
-		}
-		$(".filter_items").quicksand($filteredData, {
-			duration: 600,
-			adjustHeight: 'dynamic',
-			useScaling: true
-		}, function() { initFancyboxes(); });			
-		return false;
 	});
 	
 	// Tabs
@@ -286,5 +228,8 @@ $(document).ready(function() {
   		}
   	});
   });
+
+	$("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded', defaultHeight: '80%'});
+	
 	
 });

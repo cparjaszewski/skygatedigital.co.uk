@@ -56,6 +56,7 @@ ul.filter_list li.current a {
 	background-color: rgba(255,255,255,0.05);
 	border-color: rgba(255,255,255,0.10);
 }
+#portfolio 
 /* Testimonials */
 div.testimonial { color: #999; }
 ul.testimonials li a { border-color: rgba(255,255,255,0.10); }
@@ -65,7 +66,7 @@ ul.testimonials li a { border-color: rgba(255,255,255,0.10); }
 	}
 div.testimonial p { color: #aaa; }
 /* Contact */
-div#map address {
+.address {
 	color: #aaa;
 }
 /* Footer */
