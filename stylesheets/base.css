@@ -658,7 +658,7 @@ ul.testimonials {
 	list-style: none;
 	overflow: hidden;
 	margin-bottom: 25px;
-	text-align: center;
+	text-align: left;
 }
 	ul.testimonials li {
 		margin-right: 20px;
@@ -673,6 +673,8 @@ ul.testimonials {
 			height: 60px;
 		}
 		ul.testimonials li img {
+			width: 60px;
+			height: 60px;
 			-webkit-border-radius: 100%;
 			-moz-border-radius: 100%;
 			border-radius: 100%;
