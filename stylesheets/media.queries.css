@@ -13,7 +13,7 @@
 	4.  About
 	5.  Portfolio
 	6.  Services
-	7.  Testimonials
+	7.  Team
 	8.  Contact
 	
 -----------------------------------------------------------------------------------*/
@@ -174,18 +174,18 @@
 		margin: 0 0 15px 2px;
 	}
 	
-	/* 7. Testimonials */
+	/* 7. Team */
 	
-	div#testimonials ul.testimonials {
+	div#team ul.testimonials {
 		margin-bottom: 10px;
 	}
-	div#testimonials ul.testimonials li {
+	div#team ul.testimonials li {
 		margin: 0 19px 12px 10px;
 	}
-	div#testimonials ul.testimonials li:last-child {
+	div#team ul.testimonials li:last-child {
 		margin-right: 20px;
 	}
-	div#testimonials div.content div.testimonial {
+	div#team div.content div.testimonial {
 		width: 98%;
 	}
 

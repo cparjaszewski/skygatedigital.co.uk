@@ -229,7 +229,7 @@ $(document).ready(function() {
   	});
   });
 
-	$("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded', defaultHeight: '80%'});
+	$("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded', default_height: 600, allow_resize: true});
 	
 	
 });
