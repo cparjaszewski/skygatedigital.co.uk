@@ -715,6 +715,9 @@ div.testimonial {
 		div.testimonial .address a:hover {
 			color: #444;
 		}
+.team.movie {
+	text-align: center;	
+}
 /*--------------------------------------------
 8. Contact
 ---------------------------------------------*/
