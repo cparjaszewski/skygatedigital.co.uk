@@ -110,37 +110,40 @@ $(document).ready(function() {
 
 				var latlng = $canvas.attr("data-lat") ? 
 								new google.maps.LatLng($canvas.attr("data-lat"), $canvas.attr("data-lng")) :
-								new google.maps.LatLng(50.293966, 18.664988);
+								new google.maps.LatLng(50.793966, 9.664988);
 
 				var myOptions = {
 					zoom: dataZoom,
-					mapTypeId: google.maps.MapTypeId.HYBRID,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
 					center: latlng
 				};
 
 				var map = new google.maps.Map(this, myOptions);
 
-				var contentString = $canvas.attr('data-content') ? $canvas.attr('data-content') : '<h1>HQ</h1>';
+				var locations = [
+			      ['Gliwice (HQ)', 50.293874, 18.664999, 4],
+			      ['Wroclaw', 51.119716, 17.036774, 3],
+			      ['Kraków', 50.070246, 19.924364, 2],
+			      ['London', 51.523151, -0.081952, 1],
+			    ];
 
-				var infoWindow = new google.maps.InfoWindow({content: contentString, width: 240});
+			    var infowindow = new google.maps.InfoWindow();
 
-				if($canvas.attr('data-address')){
-					var geocoder = new google.maps.Geocoder();
-					geocoder.geocode({ 
-							'address' : $canvas.attr('data-address') 
-						},
-						function(results, status) {					
-							if (status == google.maps.GeocoderStatus.OK) {
-								map.setCenter(results[0].geometry.location);
-								var marker = new google.maps.Marker({
-									map: map,
-									position: results[0].geometry.location,
-									title: $canvas.attr('data-mapTitle')
-								});
-								infoWindow.open(map, marker);
-							}
-					});
-				}
+			    var marker, i;
+
+			    for (i = 0; i < locations.length; i++) {  
+			      marker = new google.maps.Marker({
+			        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+			        map: map
+			      });
+
+			      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			        return function() {
+			          infowindow.setContent(locations[i][0]);
+			          infowindow.open(map, marker);
+			        }
+			      })(marker, i));
+			    }
 			});
 		}
 	
