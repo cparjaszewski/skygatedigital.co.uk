@@ -38,21 +38,21 @@ $(document).ready(function() {
 	});
 });
 function switchStylesheet(styleName) {
-			if(styleName == "") {
-				
-			} else {
-				$("link[media='screen']").attr("href", 'stylesheets/'+styleName+'.css');
-			}
-			createCookie('scrolio_style', styleName, 365);
+	if(styleName == "") {
+		
+	} else {
+		$("link[media='screen']").attr("href", 'stylesheets/'+styleName+'.css');
+	}
+	createCookie('scrolio_style', styleName, 365);
 }
 function switchBg(bg) {
-			if(bg == "") {
+	if(bg == "") {
 
-			} else {
-				$("body").removeClass();
-				$("body").addClass(bg)
-			}
-			//createCookie('limon_bg', bg, 365);
+	} else {
+		$("body").removeClass();
+		$("body").addClass(bg)
+	}
+	//createCookie('limon_bg', bg, 365);
 }		
 function createCookie(name,value,days)
 {

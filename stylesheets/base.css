@@ -774,10 +774,7 @@ div#map {
 9.  Press
 ---------------------------------------------*/
 .press_list a {
-	display: inline-block;
-	text-align: center;
-	padding: 20px;
-	width: 97%;
+	
 }
 .press_list a img {
 	height: 100px;
