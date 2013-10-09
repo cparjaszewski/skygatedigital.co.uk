@@ -74,7 +74,7 @@ $(document).ready(function() {
 	
 	// Twitter widget
 	$("#twitter_stream").tweet({
-		username: "SkyGatePL", // Customize your twitter username here
+		username: "SkyGateDigital", // Customize your twitter username here
 		count: 5,
 		modpath: './twitter/',
 		template: "{text}{time}",
