@@ -1133,6 +1133,8 @@ ul.social {
 			ul.social li.email a:hover 		{ background-position: -24px -144px; }
 		ul.social li.youtube a 						{ background-position: 0px -144px; }
 			ul.social li.youtube a:hover 		{ background-position: -24px -144px; }	
+		ul.social li.linkedin a 						{ background-position: 0px -168px; }
+			ul.social li.linkedin a:hover 		{ background-position: -24px -168px; }
 div.toggle_list {
 	margin-bottom: 25px;
 }
