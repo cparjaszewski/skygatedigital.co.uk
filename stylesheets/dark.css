@@ -49,6 +49,7 @@ div.tweets {
 	border-color: #444 !important;
 }
 	div.tweets span.icon a:hover { color: #fff; }
+	div.tweets ul li { padding-bottom: 10px; }
 	div.tweets ul li .tweet_text { color: #aaa; }
 	div.tweets ul li .tweet_time a:hover { color: #ccc; }
 /* Portfolio */

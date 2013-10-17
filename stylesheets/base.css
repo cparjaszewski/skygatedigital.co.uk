@@ -479,11 +479,12 @@ div.skills {
 	}
 div.tweets {
 	clear: both;
-	padding: 20px 25px 15px 25px;
+	padding: 10px 15px 5px 15px;
 	position: relative;
 }
 	div.tweets span.icon {
 		float: left;
+		margin-right: 10px;
 		font-size: 40px;
 		margin-top: -5px;
 		position: relative;
@@ -499,9 +500,6 @@ div.tweets {
 		div.tweets span.icon a:hover {
 			color: #444;
 		}
-	div.tweets #twitter_stream {
-		margin-left: 60px;
-	}
 	div.tweets .flexslider-container {
 	    border: none;
 	    -webkit-border-radius: 0px;
@@ -526,7 +524,7 @@ div.tweets {
 	}
 	div.tweets .flex-control-nav { display: none; }
 		div.tweets ul li .tweet_text {
-			font-size: 15px;
+			font-size: 13px;
 			color: #888;
 			font-style: italic;
 			display: block;
@@ -773,21 +771,25 @@ div#map {
 /*--------------------------------------------
 9.  Press
 ---------------------------------------------*/
-.press_list a {
-	
+.press_list {
+	margin-top: 40px;
+}
+.press_list p {
+	line-height: 25px;
 }
 .press_list a img {
 	height: 100px;
+
 }
 /*--------------------------------------------
 11. Footer
 ---------------------------------------------*/
 footer {
 	clear: both;
-	padding-top: 40px;
+	padding-top: 20px;
 	text-align: center;
 	cursor: default;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 	footer p {
 		color: #aaa;
